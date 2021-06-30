@@ -25,4 +25,4 @@ function selectionSort(array) {
    return array;
 }
 
-console.log(selectionSort([22, 0, 2, 3, 12, 21]));
+//Time complexity of selection sort is On2
