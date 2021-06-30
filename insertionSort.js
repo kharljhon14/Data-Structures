@@ -5,15 +5,21 @@
 
 function insertionSort(array) {
   let j;
+  //Loop through the unsorted array element 0 is the sorted array
   for (let i = 1; i < array.length; i++) {
+    //Store the current element
     let currentValue = array[i];
+    //Loop through the sorted array and check if the current value is less than the curren element
     for (j = i - 1; j >= 0 && array[j] > currentValue; j--) {
+      //Put the next element to the left of the array
       array[j + 1] = array[j];
     }
+    //Change the value of the of the element
     array[j + 1] = currentValue;
   }
 
   return array;
 }
-
 //Time complexity On2 worst case
+
+console.log(insertionSort([2, 3, 1, 0]));

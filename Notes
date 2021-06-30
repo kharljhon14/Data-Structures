@@ -1,0 +1,4 @@
+algorithm   best time   average time    worst time      space
+Bubble sort     On          On2             On2            O1
+Insertion       On2         On2             On2            O1
+Selection       On2         On2             On2            O1
