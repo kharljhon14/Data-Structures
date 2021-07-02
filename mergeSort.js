@@ -46,4 +46,4 @@ function mergeSort(array) {
    return merge(left, right);
 }
 
-console.log(mergeSort([14, 2, 1, 0, 32, 54]));
+console.log(mergeSort([14, 2, 1, 0]));
