@@ -6,6 +6,10 @@
 //if the pivot is greater than the current element increment the pivot index variable and swap the current element with the element at the pivot index
 //swap the starting element with the pivot index
 //return the pivot index
+//-------------------------------------------------------------------
+//Call the pivot helper on the array
+//When the helper returns to you the updated pivot inde, recursively call the pivot helper on the subarray to the left of the index, and the subarray to the right of that index
+//Base case occurs when you consider a subarray with less than 2 elements
 
 function pivot(array, start = 0, end = array.length + 1) {
    function swap(array, i, j) {
@@ -25,9 +29,20 @@ function pivot(array, start = 0, end = array.length + 1) {
    }
 
    swap(array, start, spawnIndex);
-   console.log(array);
-
    return spawnIndex;
 }
 
-console.log(pivot([5, 4, 10, 30, 2, 1]));
+function quickSort(array, left = 0, right = array.length - 1) {
+   if (left < right) {
+      let pivotIndex = pivot(array, left, right);
+
+      //Left side of the array
+      quickSort(array, left, pivotIndex - 1);
+
+      //Right side of the array
+      quickSort(array, pivotIndex + 1, right);
+   }
+   return array;
+}
+
+console.log(quickSort([100, -3, 2, 4, 6, 9, 1, 2, 5, 3, 23]));
