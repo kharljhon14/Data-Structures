@@ -18,11 +18,11 @@ function selectionSort(array) {
          let temp = array[i];
          array[i] = array[minValue];
          array[minValue] = temp;
-         console.log(array);
       }
    }
 
    return array;
 }
 
+console.log(selectionSort([4, 5, 6, 3, 21, 1]));
 //Time complexity of selection sort is On2
