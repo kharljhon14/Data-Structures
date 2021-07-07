@@ -21,6 +21,13 @@ function mostDigit(nums) {
   return maxDigits;
 }
 
+//Define a function that accepts list of numbers
+//Figure out how many digits the largest numbers has
+//Loop from k = 0 up to this largest number of digits
+//For each iteration of the loop
+//  Create buckets for each digits (0 to 9)
+//  Place each number in the corresponding bucket based on its kth digit
+
 console.log(getDigit(24603, 1));
 console.log(getCount(2040));
 console.log(mostDigit([23, 53323, 123, 92]));
