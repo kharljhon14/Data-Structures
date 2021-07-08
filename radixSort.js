@@ -27,7 +27,21 @@ function mostDigit(nums) {
 //For each iteration of the loop
 //  Create buckets for each digits (0 to 9)
 //  Place each number in the corresponding bucket based on its kth digit
+//Replace Our Existing array with valuesin our buckets starting with 0 and going up to 9
+//Return List at the end
 
-console.log(getDigit(24603, 1));
-console.log(getCount(2040));
-console.log(mostDigit([23, 53323, 123, 92]));
+function radixSort(nums) {
+  let maxDigits = mostDigit(nums);
+
+  for (let k = 0; k < maxDigits; k++) {
+    let digitBuckets = Array.from({ length: 10 }, () => []);
+    for (let i = 0; i < nums.length; i++) {
+      let digit = getDigit(nums[i], k);
+      digitBuckets[digit].push(nums[i]);
+    }
+    nums = [].concat(...digitBuckets);
+  }
+  return nums;
+}
+
+console.log(radixSort([434, 123, 67, 1, 0, 8534, 34, 2]));
