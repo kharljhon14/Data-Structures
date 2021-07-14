@@ -4,3 +4,4 @@ Insertion       On2         On2             On2            O1
 Selection       On2         On2             On2            O1
 Merge sort     O(nlogn)     O(nlogn)        O(nlogn)       On
 Quick sort     O(nlogn)     O(nlogn)        On2            O(nlogn)
+Radix sort     O(nk)        O(nk)           O(nk)          O(n+k)
